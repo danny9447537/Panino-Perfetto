@@ -193,8 +193,6 @@ body.nav-active {
 
 .display-1,
 .headline-1,
-.headline-2,
-.title-1,
 .title-2,
 .title-3,
 .title-4 {
@@ -211,15 +209,6 @@ body.nav-active {
 
 .headline-1 {
   font-size: var(--fontSize-headline-1);
-}
-
-.headline-2 {
-  font-size: var(--fontSize-headline-2);
-  line-height: var(--lineHeight-6);
-}
-
-.title-1 {
-  font-size: var(--fontSize-title-1);
 }
 
 .title-2 {
@@ -246,10 +235,6 @@ body.nav-active {
 
 .body-3 {
   font-size: var(--fontSize-body-3);
-}
-
-.body-4 {
-  font-size: var(--fontSize-body-4);
 }
 
 .label-1 {
@@ -430,26 +415,6 @@ body.nav-active {
 .grid-list {
   display: grid;
   gap: 40px;
-}
-
-.hover\:shine {
-  position: relative;
-}
-
-.hover\:shine::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
-  transform: skewX(-0.08turn) translateX(-180%);
-}
-
-.hover\:shine:is(:hover, :focus-within)::after {
-  transform: skewX(-0.08turn) translateX(275%);
-  transition: var(--transition-3);
 }
 
 .img-holder {
@@ -794,7 +759,7 @@ body.nav-active {
   margin-block: 10px;
 }
 
-.navbar .body-4 {
+.navbar {
   color: var(--quick-silver);
 }
 
@@ -997,22 +962,6 @@ body.nav-active {
   z-index: 1;
 }
 
-.service-card .has-before::before {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
-  height: 100%;
-  background-image: url("../images/img-pattern.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-  transition: var(--transition-2);
-  transition-delay: 0;
-  z-index: -1;
-  will-change: transform;
-}
-
 .service-card:is(:hover, :focus-within) .has-before::before {
   transform: rotateY(0.5turn) translateX(50%);
   transition-delay: 300ms;
@@ -1074,24 +1023,6 @@ body.nav-active {
   top: -65px;
   right: 0;
   overflow: hidden;
-}
-
-.about .abs-img-1::before {
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
-  background-image: url("../images/img-pattern.svg");
-  background-repeat: repeat;
-}
-
-.about .abs-img-2::before {
-  inset: 0;
-  background-image: url("../images/badge-2-bg.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: rotate360 15s linear infinite;
 }
 
 /* Special Dish */
@@ -1245,12 +1176,12 @@ body.nav-active {
   margin: 20px auto;
 }
 
-.form-right .body-4 {
+.form-right {
   color: var(--quick-silver);
   line-height: var(--lineHeight-3);
 }
 
-.form-right .body-4:not(:last-child) {
+.form-right:not(:last-child) {
   margin-block-end: 25px;
 }
 
